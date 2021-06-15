@@ -1,5 +1,6 @@
 import axios from '@/libs/api.request'
 
+// 获取所有的学生列表
 export const getListStudent = (search) => {
   return axios.request({
     url: 'student/list',
@@ -14,13 +15,15 @@ export const getListStudent = (search) => {
     }
   })
 }
+// 新增学生信息
 export const addStudent = (student) => {
   return axios.request({
     url: 'student/addStudent',
     method: 'post',
-    data:student
+    data: student
   })
 }
+// 修改学生信息
 export const updateStudent = (student) => {
   return axios.request({
     url: 'student/updateStudent',
@@ -28,6 +31,7 @@ export const updateStudent = (student) => {
     data: student
   })
 }
+// 根据学号进行查询
 export const findByStuId = (stuId) => {
   return axios.request({
     url: 'student/findByStuId',
@@ -37,6 +41,7 @@ export const findByStuId = (stuId) => {
     }
   })
 }
+// 根据学号进行删除
 export const removeByStuId = (stuId) => {
   return axios.request({
     url: 'student/remove',

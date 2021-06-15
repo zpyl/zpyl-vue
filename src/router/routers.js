@@ -52,21 +52,30 @@ export default [
   },
   {
     path: '/basis',
-    name: 'basis',
+    name: '基本信息管理',
     component: Main,
     meta: {
       icon: 'logo-buffer',
-      title: '基本管理'
+      title: '基本信息管理'
     },
     children: [
       {
         path: 'student_page',
-        name: 'student_page',
+        name: '学生信息管理',
         meta: {
           icon: '_qq',
-          title: '学生基本管理'
+          title: '学生信息管理'
         },
         component: () => import('@/view/basisView/student_page.vue')
+      },
+      {
+        path: 'college_page',
+        name: '学院信息管理',
+        meta: {
+          icon: '_qq',
+          title: '学院信息管理'
+        },
+        component: () => import('@/view/basisView/college_page.vue')
       }
     ]
   },
