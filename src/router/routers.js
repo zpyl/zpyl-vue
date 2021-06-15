@@ -51,30 +51,22 @@ export default [
     ]
   },
   {
-    path: '',
-    name: 'doc',
-    meta: {
-      title: '文档',
-      href: 'https://lison16.github.io/iview-admin-doc/#/',
-      icon: 'ios-book'
-    }
-  },
-  {
-    path: '/join',
-    name: 'join',
+    path: '/basis',
+    name: 'basis',
     component: Main,
     meta: {
-      hideInBread: true
+      icon: 'logo-buffer',
+      title: '基本管理'
     },
     children: [
       {
-        path: 'join_page',
-        name: 'join_page',
+        path: 'student_page',
+        name: 'student_page',
         meta: {
           icon: '_qq',
-          title: 'QQ群'
+          title: '学生基本管理'
         },
-        component: () => import('@/view/join-page.vue')
+        component: () => import('@/view/basisView/student_page.vue')
       }
     ]
   },
