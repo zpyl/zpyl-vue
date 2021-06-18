@@ -76,6 +76,15 @@ export default [
           title: '学院信息管理'
         },
         component: () => import('@/view/basisView/college_page.vue')
+      },
+      {
+        path: 'staff_page',
+        name: '职工信息管理',
+        meta: {
+          icon: '_qq',
+          title: '职工信息管理'
+        },
+        component: () => import('@/view/basisView/staff_page.vue')
       }
     ]
   },
@@ -108,15 +117,6 @@ export default [
     },
     component: Main,
     children: [
-      {
-        path: 'tree_select_page',
-        name: 'tree_select_page',
-        meta: {
-          icon: 'md-arrow-dropdown-circle',
-          title: '树状下拉选择器'
-        },
-        component: () => import('@/view/components/tree-select/index.vue')
-      },
       {
         path: 'count_to_page',
         name: 'count_to_page',

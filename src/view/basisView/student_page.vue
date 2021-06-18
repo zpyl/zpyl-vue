@@ -113,7 +113,7 @@
 </template>
 <script>
 import Tables from '_c/tables'
-import { getListStudent, addStudent, updateStudent, findByStuId, removeByStuId} from '@/api/basisApi/student'
+import { getListStudent, addStudent, updateStudent, findByStuId, removeByStuId } from '@/api/basisApi/student'
 import { getListCollege, getListSubject } from '@/api/basisApi/college'
 export default {
   name: 'student_page',
@@ -190,9 +190,9 @@ export default {
   },
   methods: {
     // 格式化时间
-    parentData(value){
-      value=new Date(value)
-      return value.getFullYear()+"-"+(value.getMonth()+1)+"-"+value.getDate()
+    parentData (value) {
+      value = new Date(value)
+      return value.getFullYear() + '-' + (value.getMonth() + 1) + '-' + value.getDate()
     },
     // 更新表格
     tableData () {
@@ -207,11 +207,11 @@ export default {
       this.tableData(this.search)
     },
     // 关闭模态框
-    closeFrom(){
+    closeFrom () {
       this.modalData.view = false
-      this.subjectList=[]
-      this.studentVo={}
-      this.studentVo.sex=0
+      this.subjectList = []
+      this.studentVo = {}
+      this.studentVo.sex = 0
       this.searchData()
     },
     // 新增学生
@@ -242,9 +242,9 @@ export default {
         })
       }
     },
-    //删除学生
-    removeStudent(index){
-      removeByStuId(this.tableStudent[index].id).then( res => {
+    // 删除学生
+    removeStudent (index) {
+      removeByStuId(this.tableStudent[index].id).then(res => {
         if (res.status !== 200) {
           this.$Message.error('删除失败!')
         } else {
@@ -271,8 +271,8 @@ export default {
         this.subjectList = res.data
       })
     },
-    clearSubject(){
-      this.$refs.subjectRef.clearSingleSelect();
+    clearSubject () {
+      this.$refs.subjectRef.clearSingleSelect()
     },
     changePage (value) {
       this.search.offset = value

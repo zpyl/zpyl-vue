@@ -42,7 +42,7 @@ export const addSubject = (college) => {
   })
 }
 
-// 根据学号进行删除
+// 根据号码进行删除
 export const removeById = (id) => {
   return axios.request({
     url: 'college/remove',
